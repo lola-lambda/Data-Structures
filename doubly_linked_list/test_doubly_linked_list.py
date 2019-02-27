@@ -57,32 +57,32 @@ class DoublyLinkedListTests(unittest.TestCase):
     self.node.insert_after(2)
     self.assertEqual(self.node.next.value, 2)
 
-  # def test_list_move_to_end(self):
-  #   self.dll.add_to_head(40)
-  #   self.assertEqual(self.dll.tail.value, 1)
-  #   self.assertEqual(self.dll.head.value, 40)
+  def test_list_move_to_end(self):
+    self.dll.add_to_head(40)
+    self.assertEqual(self.dll.tail.value, 1)
+    self.assertEqual(self.dll.head.value, 40)
 
-  #   self.dll.move_to_end(self.dll.head)
-  #   self.assertEqual(self.dll.tail.value, 40)
-  #   self.assertEqual(self.dll.tail.prev.value, 1)
+    self.dll.move_to_end(self.dll.head)
+    self.assertEqual(self.dll.tail.value, 40)
+    self.assertEqual(self.dll.tail.prev.value, 1)
 
-  # def test_list_move_to_front(self):
-  #   self.dll.add_to_tail(3)
-  #   self.assertEqual(self.dll.head.value, 1)
-  #   self.assertEqual(self.dll.tail.value, 3)
+  def test_list_move_to_front(self):
+    self.dll.add_to_tail(3)
+    self.assertEqual(self.dll.head.value, 1)
+    self.assertEqual(self.dll.tail.value, 3)
 
-  #   self.dll.move_to_front(self.dll.tail)
-  #   self.assertEqual(self.dll.head.value, 3)
-  #   self.assertEqual(self.dll.head.next.value, 1)
+    self.dll.move_to_front(self.dll.tail)
+    self.assertEqual(self.dll.head.value, 3)
+    self.assertEqual(self.dll.head.next.value, 1)
 
-  # def test_get_max(self):
-  #   self.assertEqual(self.dll.get_max(), 1)
-  #   self.dll.add_to_tail(100)
-  #   self.assertEqual(self.dll.get_max(), 100)
-  #   self.dll.add_to_tail(55)
-  #   self.assertEqual(self.dll.get_max(), 100)
-  #   self.dll.add_to_tail(101)
-  #   self.assertEqual(self.dll.get_max(), 101)
+  def test_get_max(self):
+    self.assertEqual(self.dll.get_max(), 1)
+    self.dll.add_to_tail(100)
+    self.assertEqual(self.dll.get_max(), 100)
+    self.dll.add_to_tail(55)
+    self.assertEqual(self.dll.get_max(), 100)
+    self.dll.add_to_tail(101)
+    self.assertEqual(self.dll.get_max(), 101)
 
 if __name__ == '__main__':
   unittest.main()

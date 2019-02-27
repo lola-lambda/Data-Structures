@@ -70,13 +70,28 @@ class DoublyLinkedList:
       return None
 
   def move_to_front(self, node):
-    pass
+    node.delete()
+    self.add_to_head(node.value)
 
   def move_to_end(self, node):
-    pass
+    node.delete()
+    self.add_to_tail(node.value)
 
-  def delete(self, node):
-    pass
+  # def delete(self, node):
+  #   prev_node = node.prev
+  #   next_node = node.next
+  #   prev_node.next = next_node
+  #   next_node.prev = prev_node
     
   def get_max(self):
-    pass
+    cur_node = self.head
+    max_val = 0
+    while True:
+      if not cur_node:
+        return None
+      if cur_node.value > max_val:
+        max_val = cur_node.value
+      if cur_node.next is None:
+        return max_val
+      else:
+        cur_node = cur_node.next      
