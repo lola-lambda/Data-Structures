@@ -77,11 +77,11 @@ class DoublyLinkedList:
     node.delete()
     self.add_to_tail(node.value)
 
-  # def delete(self, node):
-  #   prev_node = node.prev
-  #   next_node = node.next
-  #   prev_node.next = next_node
-  #   next_node.prev = prev_node
+  def delete(self, node):
+    prev_node = node.prev
+    next_node = node.next
+    prev_node.next = next_node
+    next_node.prev = prev_node
     
   def get_max(self):
     cur_node = self.head
